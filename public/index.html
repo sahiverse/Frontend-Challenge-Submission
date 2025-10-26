@@ -1,43 +1,69 @@
 <!DOCTYPE html>
+<!-- HTML5 Document Type Declaration - Required for modern HTML -->
 <html lang="en">
   <head>
+    <!-- Character encoding - Essential for proper text rendering -->
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+
+    <!--
+      Viewport meta tag - CRITICAL for responsive design and mobile optimization
+      - width=device-width: Matches screen width
+      - initial-scale=1: No initial zoom
+      - maximum-scale=1: Prevents zoom (we handle zoom in JS)
+      - user-scalable=no: Disables pinch-to-zoom (we have custom zoom)
+      - viewport-fit=cover: Full screen on iOS devices with notches
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+
+    <!--
+      Theme color - Sets browser UI color (address bar, etc.)
+      Matches our app's dark blue theme (#0a0e27)
+    -->
+    <meta name="theme-color" content="#0a0e27" />
+
+    <!--
+      Mobile Web App Capabilities - Enables PWA-like behavior on mobile
+      - apple-mobile-web-app-capable: Runs as standalone app on iOS
+      - apple-mobile-web-app-status-bar-style: iOS status bar style
+      - mobile-web-app-capable: Android PWA capability
+    -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!--
+      App Description - SEO and social sharing
+      Describes what the app does for search engines and social platforms
+    -->
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Interactive multi-layer visualization with smooth zoom animations"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- Page Title - Appears in browser tab and bookmarks -->
+    <title>Multi-Layer Visualization</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
     <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+      Fallback message for users with JavaScript disabled
+      Most users have JS enabled, but this provides graceful degradation
+    -->
+    <noscript>You need to enable JavaScript to run this app.</noscript>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <!--
+      Root div - Where React mounts the application
+      React will inject all components and styles into this div
+    -->
+    <div id="root"></div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
+    <!--
+      Development Notes:
+      - This HTML file serves as the entry point for our React application
+      - During development: npm start serves this file
+      - During production: npm run build bundles JS/CSS and injects into this template
+      - All React components render inside the #root div
+      - Meta tags are optimized for mobile-first design and touch interactions
+      - Theme color matches our app's visual design for consistency
     -->
   </body>
 </html>
