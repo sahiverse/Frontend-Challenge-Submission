@@ -25,7 +25,7 @@ Users navigate through layers using progressive zoom (0-100%) with multiple inte
 ### UI/UX Approach
 - **Progressive navigation** with visual feedback instead of jarring instant jumps
 - **Color inheritance system** where background colors smoothly transition based on clicked nodes
-- **Mobile-first responsive design** with iOS/Android optimization and touch gesture support
+- **Responsive design** with iOS/Android optimization and touch gesture support (desktop-first approach).
 - **Visual feedback** through hover states, cursor changes, and animation cues
 
 ### Key Design Decisions
