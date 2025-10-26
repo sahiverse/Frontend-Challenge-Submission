@@ -120,7 +120,10 @@ npm start
 ```
 
 ### 🎥 Demo Video
-[Add your demo video here showing the app in action]
+
+
+
+https://github.com/user-attachments/assets/b83e059a-4c18-44e9-a225-566548119afb
 
 
 *Built with curiosity using React and Framer Motion*
